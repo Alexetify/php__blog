@@ -14,6 +14,23 @@
         return resultSetToArray($result_set);
     }
 
+    function getAllGuestBookComments(){
+        global $mysqli;
+        connectDB(); 
+        $result_set = $mysqli->query("SELECT * FROM `guestbook`");
+        closeDB();
+        return resultSetToArray($result_set);
+    }
+ 
+    function addGuestBookComment($name, $comment){
+        global $mysqli;
+        connectDB();
+        $success = $mysqli->query("INSERT INTO `guestbook`(`name`,`comment`) VALUES ('$name','$comment')");
+        closeDB();
+        return $success;
+        
+    }
+
     function getArticle($id){
         global $mysqli;
         connectDB(); 
