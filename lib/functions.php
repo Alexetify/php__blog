@@ -40,6 +40,15 @@
         
     }
 
+    function checkUser($email, $password){
+        global $mysqli;
+        connectDB();
+        $result_set = $mysqli->query("SELECT FROM `users` WHERE `email`='$email' AND `password`='$password'");
+        closeDB();
+        if ($result_set->fetch_assoc()) return true;
+        else return false;
+    }
+
     function getArticle($id){
         global $mysqli;
         connectDB(); 

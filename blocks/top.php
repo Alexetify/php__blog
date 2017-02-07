@@ -35,6 +35,11 @@
                    </table>
                </td>
                <td class="right">
+                  <?php 
+                      if (checkUser($_SESSION["email"], $_SESSION["password"])) 
+                          require_once "blocks/user_panel.php";
+                      else require_once "blocks/auth_form.php";
+                  ?>
                    <form name="auth" action="auth.php" method="post"></form>
                    <table>
                        <tr>
