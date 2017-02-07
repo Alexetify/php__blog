@@ -31,6 +31,15 @@
         
     }
 
+    function addUser($email, $password){
+        global $mysqli;
+        connectDB();
+        $success = $mysqli->query("INSERT INTO `users`(`email`,`password`) VALUES ('$email','$password')");
+        closeDB();
+        return $success;
+        
+    }
+
     function getArticle($id){
         global $mysqli;
         connectDB(); 
