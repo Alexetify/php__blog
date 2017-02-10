@@ -17,7 +17,7 @@
     function getAllGuestBookComments(){
         global $mysqli;
         connectDB(); 
-        $result_set = $mysqli->query("SELECT * FROM `guestbook`");
+        $result_set = $mysqli->query("SELECT * FROM `guestbook` ");
         closeDB();
         return resultSetToArray($result_set);
     }
@@ -34,7 +34,7 @@
     function addUser($email, $password){
         global $mysqli;
         connectDB();
-        $success = $mysqli->query("INSERT INTO `users`(`email`,`password`) VALUES ('$email'','$password'')");
+        $success = $mysqli->query("INSERT INTO `users` (`email`, `password`) VALUES ('$email`,'$password'')");
         closeDB();
         return $success;
         

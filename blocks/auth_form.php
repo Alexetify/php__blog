@@ -1,5 +1,6 @@
 <?php  
     if($_SESSION["error_auth"]) {
+        unset($_SESSION["error_auth"]);
         $alert = "Неверный email и/или пароль !";
         include "alert.php";
     }
