@@ -9,7 +9,7 @@
         else $success = addUser($email, md5($password_1));
         if (!$success) $alert = "Ошибка при регистрации";
         else $alert = "Вы успешно зарегистрировались";
-        include "alert.php";
+        include "alert.php"; 
     }
         
 ?>
