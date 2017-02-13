@@ -5,7 +5,7 @@
         include "alert.php";
     }
 ?>
-<form name="auth" action="auth.php" method="post"></form>
+<form name="auth" action="auth.php" method="post">
 <table>
    <tr>
        <td>E-mail:</td>
