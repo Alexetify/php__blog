@@ -7,25 +7,21 @@
     }
 
     function getAllArticles(){
-        global $mysqli;
-        connectDB(); 
-        $result_set = $mysqli->query("SELECT * FROM `articles`");
-        closeDB();
-        return resultSetToArray($result_set);
+        return getAll("articles");
     }
 
     function getAllGuestBookComments(){
-        global $mysqli;
-        connectDB(); 
-        $result_set = $mysqli->query("SELECT * FROM `guestbook` ");
-        closeDB();
-        return resultSetToArray($result_set);
+        return getAll("guestbook");
     }
 
     function getAllBanners(){
+       return getAll("banners");
+    }
+
+    function getAll($table){
         global $mysqli;
         connectDB(); 
-        $result_set = $mysqli->query("SELECT * FROM `banners` ");
+        $result_set = $mysqli->query("SELECT * FROM `$table` ");
         closeDB();
         return resultSetToArray($result_set);
     }

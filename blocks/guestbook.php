@@ -23,6 +23,7 @@
 <h2>Записи в гостевой книге</h2>
 <div>
     <?php 
+       // $start = microtime(true);
         if (!empty ($_POST["button_guestbook"])) {
             $name = htmlspecialchars($_POST["name"]);
             $comment = htmlspecialchars($_POST["comment"]);
@@ -39,5 +40,6 @@
             $comment = $comments[$i]["comment"];
             include "blocks/guestbook_comment.php";
         }
+       // echo "Время выполнения скрипта: ".(microtime(true) - $start);
     ?>
 </div>
