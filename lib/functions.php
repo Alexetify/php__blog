@@ -21,6 +21,14 @@
         closeDB();
         return resultSetToArray($result_set);
     }
+
+    function getAllBanners(){
+        global $mysqli;
+        connectDB(); 
+        $result_set = $mysqli->query("SELECT * FROM `banners` ");
+        closeDB();
+        return resultSetToArray($result_set);
+    }
  
     function addGuestBookComment($name, $comment){
         global $mysqli;

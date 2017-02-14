@@ -1,13 +1,8 @@
-<div class="banner">
- <a href="#">
-  <img src="images/guitar.jpg" alt="Гитара" />
-  </a>
-</div>
-<hr />
-<td id="banners_240">
-<div class="banner">
- <a href="#">
-  <img src="images/YPN.jpg" alt="Young Poets Network" />
-  </a>
-</div>
-<hr />
+<h2>Реклама</h2>
+<?php 
+    $banners = getAllBanners();
+    for ($i = 0; $i < count($banners); $i++) {
+       $code = $banners[$i]["code"];
+        include "banner.php";
+    }
+?>
