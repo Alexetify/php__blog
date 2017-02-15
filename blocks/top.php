@@ -14,6 +14,22 @@
                   
               </td>
           </tr>
+          <tr>
+              <td colspan="2" id="search">
+                 <form name="search" action="search.php" method="get">
+                 <p>
+                 <input type="text" name="words" value="Поиск..." onfocus="if (this.value=='Поиск...') this.value='';" onblur="if(this.value=='') this.value='Поиск...'" />
+                 <input type="submit" name="button_search" value="Найти" />
+                 </p>
+                 </form>
+              </td>
+          </tr>
+          <tr>
+              <td colspan="2">
+                 <hr />
+                  
+              </td>
+          </tr>
            <tr>
                <td>
                    <table id="topmenu">

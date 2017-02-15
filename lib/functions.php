@@ -68,6 +68,21 @@
         return $array;
         
     }
+
+    function searchArticles($words){
+        $query_search = "";
+        $arraywords =explode(" ", $words);
+        print_r($arraywords);
+        foreach ($arraywords as $key => $value) {
+            if (isset($arraywords[$key - 1])) $query_search .= " OR ";
+            $query_search .= "(`full_text` LIKE '%$value%' OR `title` LIKE '%$value%')";
+        }
+        global $mysqli;
+        connectDB();
+        $result_set = $mysqli->query("SELECT * FROM `articles` WHERE $query_search ");
+        closeDB();
+        return resultSetToArray($result_set);
+    }
  
     function closeDB(){
         global $mysqli;
