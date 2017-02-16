@@ -2,8 +2,8 @@
 <?php
     if (($_GET["button_search"]) && (!empty($_GET["words"]))) {
         $words = htmlspecialchars($_GET["words"]);
-        $results = searchArticles($_GET["words"]);
-        if (count($results) !=0) {
+        $results = searchArticles($words);
+        if (count($results) != 0) {
             for ($i = 0; $i < count($results); $i++){
                 $number = $i +1;
                 $link = "article.php?id=".$results[$i]["id"];
@@ -11,6 +11,7 @@
                 include "search_item.php";
             }
         }
+        else echo "Ничего не найдено";
     }
     else echo "Не задан поисковый запрос!";
 ?>

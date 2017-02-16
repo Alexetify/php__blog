@@ -69,10 +69,9 @@
         
     }
 
-    function searchArticles($words){
+    function searchArticles($words) {
         $query_search = "";
-        $arraywords =explode(" ", $words);
-        print_r($arraywords);
+        $arraywords = explode(" ", $words);
         foreach ($arraywords as $key => $value) {
             if (isset($arraywords[$key - 1])) $query_search .= " OR ";
             $query_search .= "(`full_text` LIKE '%$value%' OR `title` LIKE '%$value%')";
