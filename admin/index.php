@@ -12,7 +12,14 @@
        <link rel="stylesheet" type="text/css" href="styles/main.css" />
    </head>
    <body>
-       
+       <h1 id="header">Admin-панель</h1>
+       <h2>Меню</h2>
+       <p>
+           <a href="#">Добавить новую статью</a>
+       </p>
+       <p>
+           <a href="../logout.php">Выход</a>
+       </p>
    </body>
     
 </html>
