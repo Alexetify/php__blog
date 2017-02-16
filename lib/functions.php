@@ -82,6 +82,15 @@
         closeDB();
         return resultSetToArray($result_set);
     }
+
+    function isAdmin($email) {
+        global $mysqli;
+        connectDB(); 
+        $result_set = $mysqli->query("SELECT * FROM `users` WHERE `email`='$email'");
+        $row = $result_set->fetch_assoc();
+        closeDB();
+        return $row["admin"];
+    }
  
     function closeDB(){
         global $mysqli;
