@@ -2,8 +2,6 @@
    require_once "start.php";
 
 ?>
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xthml11/DTD/xthml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
@@ -17,8 +15,7 @@
               <?php 
                   require_once "blocks/top.php";
               ?>
-              
-           </tr>
+          </tr>
            <tr>
                <td colspan="2">
                   <table cellpadding="0" cellspacing="0" id="content">

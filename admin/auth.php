@@ -18,7 +18,8 @@
           <?php if ($_SESSION["error_auth"] == 1) {
     echo "Неверные имя пользователя и/или пароль!";
     unset ($_SESSION["error_auth"]);
-}?>
+}
+           ?>
            <form name="auth" action="../auth.php" method="post">
                <p>E-mail:<br />
                    <input type="text" name="email" />
@@ -32,5 +33,4 @@
            </form>
        </div>
    </body>
-    
 </html>
